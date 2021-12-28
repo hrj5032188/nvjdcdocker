@@ -169,7 +169,7 @@ cd  /root/nolanjdc
 10启动镜像
 
 ```
-sudo docker run   --name nolanjdc -p 5701:80 -d  -v  "$(pwd)":/app \
+sudo docker run --name nolanjdc --restart always -p 5701:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
 -it --privileged=true  nolanhzy/nvjdc:latest
 ```
